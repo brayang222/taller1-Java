@@ -13,6 +13,7 @@ public class App {
         dispensador.cantAct = 900;
 
         int opcion = 0;
+        int cantidadServir = 0;
 
 
         System.out.printf("la marca es " + dispensador.marca + " la temperatura " + dispensador.caliente()
@@ -45,7 +46,9 @@ public class App {
                 System.out.println("la temperatura es: " + dispensador.temp);
                 break;
             case 5:
-                dispensador.servir(1);
+                System.out.println("cuánta cantidad quieres servir");
+                cantidadServir = scanner.nextInt();
+                dispensador.servir(cantidadServir);
                 break;
             case 6:
                 dispensador.llenar(1000);
